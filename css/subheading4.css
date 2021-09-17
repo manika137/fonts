@@ -1,21 +1,36 @@
-body {
-   background-color: #FFF5EE;
-   margin:0;
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #gap::before {
+    content: "\a\a\a\a\a\a\a";
+    white-space: pre;
+  }
 }
 
-.patterns {
-  height: 100vh;
-  
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #nogap {
+    margin-top:-880px;
+  }
+
 }
+
+
 
 svg text {
   font-family: Lora;
   letter-spacing: 10px;
   stroke: #DE5D83; 
-  font-size: 150px;
+  font-size: 10vw;
   font-weight: 700;
   stroke-width: 3;
- 
+  margin:0;
+  padding:0;
+  /*
+  position: relative;
+    left:8vw; 
+    width: 10vw;
+    height: 8vw;
+    top:1vw; */
   animation: textAnimate 5s infinite alternate;
   
 }
@@ -27,10 +42,11 @@ svg text {
     fill:#ffbad0;
 
   }
-  
-  100% {
+
+  100%
+ {
     stroke-dasharray: 50% 0;
-    stroke-dashoffstet: -20%;
+    stroke-dashoffset: -20%;
     fill: #e90080;
   }
   
